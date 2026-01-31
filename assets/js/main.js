@@ -312,3 +312,37 @@ function initRecruiterGrid() {
 
 // Call this along with your course grid function
 initRecruiterGrid();
+
+
+
+// student feedback section
+const feedbackVideos = [
+  { id: "NQS6zzArqvU", name: "Abhijit Suryavanshi" }, 
+  { id: "-hRFTKVHSSE", name: "Mandeep Singh Randhawa" },
+  { id: "GxaGadSZcoc", name: "Jonathon Baldrey" },
+  { id: "-WMcS_QXBAM", name: "Sai Tharun" },
+  { id: "mUTxh8IhsSY", name: "Prince Chaurasia" },
+  { id: "jhFVt3I_xnY", name: "Vaibhav Soni" }
+];
+
+function initFeedbackGrid() {
+  const container = document.getElementById('feedbackGrid');
+
+  container.innerHTML = feedbackVideos.map(vid => `
+    <div class="video-card">
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/${vid.id}" 
+          title="${vid.name} Feedback" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="play-overlay">
+        <div class="play-button"></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+initFeedbackGrid();
