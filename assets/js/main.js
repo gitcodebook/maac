@@ -226,34 +226,34 @@
 // course card section
 const myCourses = [
   {
-    title: "3D Animation",
-    img: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=500", short: "Master storytelling through animation.",
-    long: "Become a 3D Animator, Character Designer, or Storyboard Artist."
+    title: "VISUAL ARTS & DESIGN",
+    img: "assets/img/courses/course-1.1.jpg", short: "Master storytelling through animation.",
+    long: "India’s media and entertainment industry is booming, seeking skilled professionals in visual arts and design. To enter, acquire the right skills and get professional training in digital content creation."
   },
 
   {
-    title: "VFX Courses",
+    title: "VISUAL EFFECTS (VFX)",
     img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=500", short: "Develop visual effects skills for film & TV.",
-    long: "Work as a VFX Artist, Compositor, or Rotoscoping Artist."
+    long: "A career in VFX is highly sought after, bringing fantasy worlds to life. MAAC Raipur exclusive VFX courses can transform you into a skilled professional, enhancing your abilities and building your career. "
   },
   {
-    title: "Game Design",
-    img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=500", short: "Expertise in game design & rendering.", long: "Work as a Game Developer, Level Designer, or Programmer."
+    title: "3D ANIMATION",
+    img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=500", short: "Expertise in game design & rendering.", long: "The animation industry is rewarding but demanding, driven by innovation, and skilled professionals. To build a successful career in this dynamic field, join the Animation and Filmmaking course."
   },
   {
-    title: "Graphic Design",
+    title: "AUGMENTED & VIRTUAL REALITY",
     img: "https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=500", short: "Learn visual communication & illustration.",
-    long: "Become a Graphic Designer, Illustrator, or Art Director."
+    long: "MAAC Raipur Digital Design courses teach you to effectively use images, words, symbols, and letters to communicate, ensuring your message reaches the right audience at the right time."
   },
   {
-    title: "Web Design",
+    title: "DEGITAL DESIGN & DEVELOPMENT",
     img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=500", short: "Master UI/UX and web development.",
-    long: "Work as a Web Designer, UI/UX Specialist, or Developer."
+    long: "MAAC Raipur Digital Design courses train you to use images, words, symbols, and letters for effective communication, ensuring the right message reaches the right audience at the right time."
   },
   {
-    title: "Film Making",
+    title: "BROADCASTING & FILMMAKING",
     img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=500", short: "Explore direction and cinematography.",
-    long: "Become a Director, Cinematographer, or Video Editor."
+    long: "Broadcast media has vast potential. MAAC Raipur course provides hands-on training with broadcasting tools, preparing you for roles in newsrooms or TV and film studios, focusing on both radio and VFX."
   }
 ];
 
@@ -317,7 +317,7 @@ initRecruiterGrid();
 
 // student feedback section
 const feedbackVideos = [
-  { id: "NQS6zzArqvU", name: "Abhijit Suryavanshi" }, 
+  { id: "NQS6zzArqvU", name: "Abhijit Suryavanshi" },
   { id: "-hRFTKVHSSE", name: "Mandeep Singh Randhawa" },
   { id: "GxaGadSZcoc", name: "Jonathon Baldrey" },
   { id: "-WMcS_QXBAM", name: "Sai Tharun" },
