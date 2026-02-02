@@ -233,26 +233,26 @@ const myCourses = [
 
   {
     title: "VISUAL EFFECTS (VFX)",
-    img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=500", short: "Develop visual effects skills for film & TV.",
+    img: "assets/img/courses/course-2.jpg", short: "Develop visual effects skills for film & TV.",
     long: "A career in VFX is highly sought after, bringing fantasy worlds to life. MAAC Raipur exclusive VFX courses can transform you into a skilled professional, enhancing your abilities and building your career. "
   },
   {
     title: "3D ANIMATION",
-    img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=500", short: "Expertise in game design & rendering.", long: "The animation industry is rewarding but demanding, driven by innovation, and skilled professionals. To build a successful career in this dynamic field, join the Animation and Filmmaking course."
+    img: "assets/img/courses/course-3.jpg", short: "Expertise in game design & rendering.", long: "The animation industry is rewarding but demanding, driven by innovation, and skilled professionals. To build a successful career in this dynamic field, join the Animation and Filmmaking course."
   },
   {
     title: "AUGMENTED & VIRTUAL REALITY",
-    img: "https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=500", short: "Learn visual communication & illustration.",
+    img: "assets/img/courses/course-4.jpg", short: "Learn visual communication & illustration.",
     long: "MAAC Raipur Digital Design courses teach you to effectively use images, words, symbols, and letters to communicate, ensuring your message reaches the right audience at the right time."
   },
   {
     title: "DEGITAL DESIGN & DEVELOPMENT",
-    img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=500", short: "Master UI/UX and web development.",
+    img: "assets/img/courses/course-5.jpg", short: "Master UI/UX and web development.",
     long: "MAAC Raipur Digital Design courses train you to use images, words, symbols, and letters for effective communication, ensuring the right message reaches the right audience at the right time."
   },
   {
     title: "BROADCASTING & FILMMAKING",
-    img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=500", short: "Explore direction and cinematography.",
+    img: "assets/img/courses/course-6.jpg", short: "Explore direction and cinematography.",
     long: "Broadcast media has vast potential. MAAC Raipur course provides hands-on training with broadcasting tools, preparing you for roles in newsrooms or TV and film studios, focusing on both radio and VFX."
   }
 ];
