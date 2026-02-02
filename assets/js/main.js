@@ -284,6 +284,41 @@ function initCourseGrid() {
 initCourseGrid();
 
 
+// borchure donload section
+
+// 1. Open Modal when "View Details" is clicked
+// Update your existing button event listener:
+document.addEventListener('click', function(e) {
+  if (e.target && (e.target.classList.contains('animated-button') || e.target.closest('.animated-button'))) {
+    document.getElementById('brochureModal').style.display = 'block';
+  }
+});
+
+// 2. Close Modal
+document.querySelector('.close-modal').addEventListener('click', () => {
+  document.getElementById('brochureModal').style.display = 'none';
+});
+
+// 3. Handle Form Submission
+document.getElementById('brochureForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Stop page from refreshing
+  
+  // Collect Data (You can send this to your email or database here)
+  const leadData = {
+    name: document.getElementById('userName').value,
+    email: document.getElementById('userEmail').value,
+    phone: document.getElementById('userPhone').value,
+    course: document.getElementById('userCourse').value
+  };
+  
+  console.log("New Lead Captured:", leadData);
+
+  // Switch View
+  document.getElementById('formContainer').style.display = 'none';
+  document.getElementById('downloadContainer').style.display = 'block';
+});
+
+
 // our recuitar section 
 const recruiterLogos = [
   { name: "Red Chillies", url: "assets/img/clients/client-1.jpg" },

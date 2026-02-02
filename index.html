@@ -51,6 +51,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
       </nav>
 
     </div>
@@ -182,7 +183,7 @@
     </section>
     <!-- /Clients Section -->
 
-    <!-- Services Section -->
+    <!--maac Courses Section -->
     <section id="maac-courses-section" style="background-color: rgb(138, 0, 0);mix-blend-mode: multiply;"
       class="courses-section section">
       <div class="container section-title" data-aos="fade-up">
@@ -199,12 +200,47 @@
           <!-- Course items will be dynamically inserted here -->
         </div>
       </div>
-
+      <div class="container text-center" data-aos="fade-up" data-aos-delay="200" style="margin-top: 20px;">
+        <button class="animated-button text-center" id="downloadBrochureBtn">Download Course Brochure</button>
+      </div>
     </section>
 
+    <!-- /maac courses Section -->
 
-    <!-- /Services Section -->
+    <!-- brochure download section start -->
+    <div id="brochureModal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="formContainer">
+          <h3>Download Brochure</h3>
+          <p>Please provide your details to access the course brochure.</p>
+          <form id="brochureForm">
+            <input type="text" id="userName" placeholder="Full Name" required>
+            <input type="email" id="userEmail" placeholder="Email Address" required>
+            <input type="tel" id="userPhone" placeholder="Contact Number" required>
+            <select id="userCourse" required>
+              <option value="" disabled selected>Course interested in...</option>
+              <option value="3d-animation">3D Animation</option>
+              <option value="augmented-virtual-reality">AUGMENTED & VIRTUAL REALITY</option>
+              <option value="vfx">VFX Courses</option>
+              <option value="game-design">Digital Design &Development</option>
+              <option value="broadcasting"> Broadcasting </option>
+              <option value="visual-arts">Visual Arts & Design</option>
+            </select>
+            <button type="submit" class="submit-btn">Submit & Download</button>
+          </form>
+        </div>
 
+        <div id="downloadContainer" style="display: none; text-align: center;">
+          <div class="success-icon">✓</div>
+          <h3>Thank You!</h3>
+          <p>Your brochure is ready for download.</p>
+          <a href="assets/MAAC_Brochure_Ecopy.pdf" download class="download-link-btn">Click Here to Download PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- brochure download section end -->
 
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section dark-background">
@@ -215,11 +251,9 @@
         <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-xl-10">
             <div class="text-center">
-              <h3>Call To Action</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.</p>
-              <a class="cta-btn" href="#">Call To Action</a>
+              <h3>Do you have further questions? Our experts are here to help?</h3>
+              <p>Fill out the form to speak with an expert.</p>
+              <a class="cta-btn" href="#contact">Contact Us</a>
             </div>
           </div>
         </div>
@@ -232,7 +266,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Our Student Work</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Best Of Our Student Projects</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -587,8 +621,8 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
               <img src="assets/img/team/ashoksir.jpeg" class="img-fluid" alt="">
-              <h4>Ashok sir</h4>
-              <span>Center Head</span>
+              <h4>Ashok Chandwani</h4>
+              <span>Director</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -602,7 +636,7 @@
             <div class="member">
               <img src="assets/img/team/ankitsir.jpeg" class="img-fluid" alt="">
               <h4>Ankit Martin</h4>
-              <span>Senior Faculty VFx & 3D Generalist</span>
+              <span>Academic Head (3D CGI Generalist)</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -616,7 +650,7 @@
             <div class="member">
               <img src="assets/img/team/nehamam.png" class="img-fluid" alt="">
               <h4>Neha Upadhyay</h4>
-              <span>Head Caunselor</span>
+              <span>Centre Head</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -630,7 +664,7 @@
             <div class="member">
               <img src="assets/img/team/ishitamam.jpeg" class="img-fluid" alt="">
               <h4>Ishita Singh</h4>
-              <span>3D Faculty cum 3D Concept Artist</span>
+              <span>Business development Executive</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -656,7 +690,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p> Frequently Asked Questions About MAAC Raipur </p>
       </div><!-- End Section Title -->
 
       <div class="container">
