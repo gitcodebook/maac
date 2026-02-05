@@ -437,7 +437,7 @@ document.getElementById('brochureForm').addEventListener('submit', function (eve
 
   // 3. Send via EmailJS
   // You can use the SAME Service ID, but you might want a DIFFERENT Template ID
-  emailjs.send('service_06cf9pe', 'template_tqpkng7', templateParams)
+  emailjs.send('service_06cf9pe', 'template_bq5xt8v', templateParams)
     .then(function () {
       alert('Thank you! Your download will start now.');
 
