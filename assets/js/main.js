@@ -288,7 +288,7 @@ initCourseGrid();
 
 // 1. Open Modal when "View Details" is clicked
 // Update your existing button event listener:
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
   if (e.target && (e.target.classList.contains('animated-button') || e.target.closest('.animated-button'))) {
     document.getElementById('brochureModal').style.display = 'block';
   }
@@ -297,25 +297,6 @@ document.addEventListener('click', function(e) {
 // 2. Close Modal
 document.querySelector('.close-modal').addEventListener('click', () => {
   document.getElementById('brochureModal').style.display = 'none';
-});
-
-// 3. Handle Form Submission
-document.getElementById('brochureForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // Stop page from refreshing
-  
-  // Collect Data (You can send this to your email or database here)
-  const leadData = {
-    name: document.getElementById('userName').value,
-    email: document.getElementById('userEmail').value,
-    phone: document.getElementById('userPhone').value,
-    course: document.getElementById('userCourse').value
-  };
-  
-  console.log("New Lead Captured:", leadData);
-
-  // Switch View
-  document.getElementById('formContainer').style.display = 'none';
-  document.getElementById('downloadContainer').style.display = 'block';
 });
 
 
@@ -381,3 +362,99 @@ function initFeedbackGrid() {
 }
 
 initFeedbackGrid();
+
+// 3. Handle Form Submission
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // This stops the "Action not set" error
+
+  // 1. Setup UI Elements
+  const loading = this.querySelector('.loading');
+  const errorMessage = this.querySelector('.error-message');
+  const sentMessage = this.querySelector('.sent-message');
+  const phoneInput = document.getElementById('phone-field').value;
+
+  // 2. Validate Phone (Exactly 10 digits)
+  if (!/^\d{10}$/.test(phoneInput)) {
+    errorMessage.innerHTML = "Please enter exactly 10 digits for the phone number.";
+    errorMessage.style.display = 'block';
+    return;
+  }
+
+  // 3. Show Loading
+  loading.style.display = 'block';
+  errorMessage.style.display = 'none';
+  sentMessage.style.display = 'none';
+
+  // 4. Prepare Data for EmailJS
+  const templateParams = {
+    user_name: document.getElementById('name-field').value,
+    user_email: document.getElementById('email-field').value,
+    user_phone: phoneInput,
+    subject: document.getElementById('subject-field').value,
+    message: document.getElementById('message-field').value
+  };
+
+  // 5. Send using EmailJS
+  emailjs.send('service_06cf9pe', 'template_tqpkng7', templateParams)
+    .then(function () {
+      loading.style.display = 'none';
+      sentMessage.style.display = 'block';
+      document.getElementById('contactForm').reset();
+    }, function (error) {
+      loading.style.display = 'none';
+      errorMessage.innerHTML = 'Submission failed. Please check your EmailJS settings.';
+      errorMessage.style.display = 'block';
+      console.error('EmailJS Error:', error);
+    });
+});
+
+
+// handle brochure download form
+
+document.getElementById('brochureForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const phoneInput = document.getElementById('userPhone').value;
+  const submitBtn = this.querySelector('.submit-btn');
+
+  // 1. Validate Phone Number
+  if (!/^\d{10}$/.test(phoneInput)) {
+    alert("Please enter a valid 10-digit phone number.");
+    return;
+  }
+
+  // Change button text to show progress
+  submitBtn.innerText = "Sending...";
+  submitBtn.disabled = true;
+
+  // 2. Prepare Data (Match these to your Template)
+  const templateParams = {
+    from_name: document.getElementById('userName').value,
+    from_email: document.getElementById('userEmail').value,
+    phone: phoneInput,
+    course: document.getElementById('userCourse').value
+  };
+
+  // 3. Send via EmailJS
+  // You can use the SAME Service ID, but you might want a DIFFERENT Template ID
+  emailjs.send('service_06cf9pe', 'template_tqpkng7', templateParams)
+    .then(function () {
+      alert('Thank you! Your download will start now.');
+
+      // 4. Trigger the Download
+      // Replace 'brochure.pdf' with the actual path to your file
+      const link = document.createElement('a');
+      link.href = 'assets/MAAC_Brochure_Ecopy.pdf';
+      link.download = 'MAAC_Brochure_Ecopy.pdf';
+      link.click();
+
+      // Reset form
+      document.getElementById('brochureForm').reset();
+      submitBtn.innerText = "Submit & Download";
+      submitBtn.disabled = false;
+    }, function (error) {
+      alert('Oops... something went wrong.');
+      submitBtn.disabled = false;
+      submitBtn.innerText = "Submit & Download";
+    });
+});
